@@ -13,7 +13,7 @@
  class FinalCalculation {
  
      val deliveryFee = Deliveryfee()
-     @Test fun `Testing if the sum up of the calculations inside of CalculateDeliveryFee expectedly works`() {
+     @Test fun `Testing if the sum of the calculations inside of CalculateDeliveryFee expectedly works`() {
          //all zero
          val reqZero = FeeCalcRequest (
              cart_value = 0,

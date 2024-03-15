@@ -20,41 +20,41 @@ class ReqDataVerifyeqDataverification {
                 number_of_items = 3,
                 time = "2024-02-03T05:35:00Z" 
         )
-
+        
             val isTrue = reqDataVerify.jsonVerification(generalReq)
             assertTrue(isTrue)
 
 
-        val `Minus cart_value` = FeeCalcRequest(
+        val `negative cart_value` = FeeCalcRequest(
                 cart_value = -1000, 
                 delivery_distance = 2500,
                 number_of_items = 3,
                 time = "2024-02-03T05:35:00Z" 
         )
 
-            val isFalse1 = reqDataVerify.jsonVerification(`Minus cart_value`)
+            val isFalse1 = reqDataVerify.jsonVerification(`negative cart_value`)
             assertFalse(isFalse1)
 
 
-        val `Minus delivery_distance` = FeeCalcRequest(
+        val `negative delivery_distance` = FeeCalcRequest(
                 cart_value = 1000, 
                 delivery_distance = -2500,
                 number_of_items = 3,
                 time = "2024-02-03T05:35:00Z" 
         )
 
-            val isFalse2 = reqDataVerify.jsonVerification(`Minus delivery_distance`)
+            val isFalse2 = reqDataVerify.jsonVerification(`negative delivery_distance`)
             assertFalse(isFalse2)
 
 
-        val `Minus number_of_items` = FeeCalcRequest(
+        val `negative number_of_items` = FeeCalcRequest(
                 cart_value = 1000, 
                 delivery_distance = 2500,
                 number_of_items = -3,
                 time = "2024-02-03T05:35:00Z" 
         )
 
-            val isFalse3 = reqDataVerify.jsonVerification(`Minus number_of_items`)
+            val isFalse3 = reqDataVerify.jsonVerification(`negative number_of_items`)
             assertFalse(isFalse3)
 
 

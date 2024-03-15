@@ -61,17 +61,17 @@ class TestEachFunctionsOfdeliveryFee {
         val zero = deliveryFee.calculateItemSurcharge(0)
         val small = deliveryFee.calculateItemSurcharge(1)
         val just = deliveryFee.calculateItemSurcharge(5)
-        val large = deliveryFee.calculateItemSurcharge(7)
+        val large = deliveryFee.calculateItemSurcharge(10)
         val twelve = deliveryFee.calculateItemSurcharge(12)
-        val superLarge = deliveryFee.calculateItemSurcharge(17)
+        val superLarge = deliveryFee.calculateItemSurcharge(14)
 
         assertEquals("error in calculateItemSurcharge", minus.message)
         assertEquals(0, zero)
         assertEquals(0, small)
         assertEquals(50, just)
-        assertEquals(150, large)
+        assertEquals(300, large)
         assertEquals(400, twelve)
-        assertEquals(770, superLarge)
+        assertEquals(620, superLarge)
       
     } 
 
