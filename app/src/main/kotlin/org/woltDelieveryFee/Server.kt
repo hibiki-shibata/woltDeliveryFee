@@ -78,7 +78,6 @@ class Server {
                         // e.printStackTrace()
                     } catch (e: Exception) {
                         call.respond(HttpStatusCode.InternalServerError, "500: Internal Server Errorr")
-                        println(e)
                         // e.printStackTrace()
                     }
 
