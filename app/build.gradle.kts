@@ -30,15 +30,15 @@ dependencies {
     implementation("io.ktor:ktor-server-netty:2.3.9")
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
-    // implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
 
+    // Json 
     implementation("io.ktor:ktor-server-content-negotiation:2.3.9")
     implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.9")
 
-    // implementation("io.ktor:ktor-server-request-validation:2.3.9")
-
     // Use the Kotlin JUnit 5 integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
+    
+    // testImplementation("org.jetbrains.kotlin:kotlin-test")
 
     // Use the JUnit 5 integration.
     testImplementation(libs.junit.jupiter.engine)
