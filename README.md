@@ -1,19 +1,19 @@
 # File structure
 ## Source directory
-`./app/src/main/kotlin/deliveryfee/*`
+`./app/src/main/kotlin/woltDeliveryFee/*`
 #### Entry point: 
-`./app/src/main/kotlin/deliveryfee/App.kt`
+`./app/src/main/kotlin/woltDeliveryFee/App.kt`
 #### Server configuration: 
-`./app/src/main/kotlin/deliveryfee/Server.kt`
+`./app/src/main/kotlin/woltDeliveryFee/Server.kt`
 #### Verify requested values are valid:
-`./app/src/main/kotlin/deliveryfee/ReqDataVerify.kt`
+`./app/src/main/kotlin/woltDeliveryFee/ReqDataVerify.kt`
 #### Verify response values are valid:
-`./app/src/main/kotlin/deliveryfee/ResDataVerify.kt`
+`./app/src/main/kotlin/woltDeliveryFee/ResDataVerify.kt`
 #### Calculation process:
-`./app/src/main/kotlin/deliveryfee/deliveryFeeCalculations/CalculateTotalDeliveryFee.kt`
+`./app/src/main/kotlin/woltDeliveryFee/deliveryFeeCalculations/CalculateTotalDeliveryFee.kt`
 
 ## Test directory:
-`./app/src/test/kotlin/deliveryfee/*`
+`./app/src/test/kotlin/woltDeliveryFee/*`
 
 ## Dependencies:
 `./app/build.gradle.kts`
@@ -42,7 +42,7 @@ $ gradle build
 ```
 To run the Built jar file, you can use this command
 ```bash
-java -jar ~/deliveryFee/app/build/libs/app.jar
+java -jar ~/woltDeliveryFee/app/build/libs/app.jar
 ```
 
 Author: hibiki.shibata@wolt.com
