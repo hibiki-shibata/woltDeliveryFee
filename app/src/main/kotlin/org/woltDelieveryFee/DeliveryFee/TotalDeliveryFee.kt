@@ -7,25 +7,24 @@ import java.time.OffsetDateTime
 import appkt.serverkt.FeeCalcRequest
 
 
+
 class DeliveryFee {
 
     // Total calculation
-     fun sumDeliveryFee(request: FeeCalcRequest): Int {        
-            val cartValue: Int = request.cart_value
-            val deliveryDistance: Int = request.delivery_distance
-            val numberOfItems: Int = request.number_of_items
+      fun sumDeliveryFee(request: FeeCalcRequest): Int {        
+    
             val deliveryTime: OffsetDateTime = OffsetDateTime.parse(request.time)
 
             val cartValueForFreeDelivery: Int = 20000
             val deliveryFeeMaxCap: Int = 1500
 
             //Spec:The delivery is free (0€) when the cart value is equal or more than 200€.
-            if (cartValue >= cartValueForFreeDelivery) return 0
+            if (request.cart_value >= cartValueForFreeDelivery) return 0
             
             // Calculate each type of fee
-            val smallOrderSurcharge: Int = calculateOrderSurcharge(cartValue)
-            val distanceFee: Int = calculateDistanceFee(deliveryDistance)
-            val itemSurcharge: Int = calculateItemSurcharge(numberOfItems)
+            val smallOrderSurcharge: Int = calculateOrderSurcharge(request.cart_value)
+            val distanceFee: Int = calculateDistanceFee(request.delivery_distance)
+            val itemSurcharge: Int = calculateItemSurcharge(request.number_of_items)
 
             var deliveryFeeSubTotal: Int = smallOrderSurcharge + distanceFee + itemSurcharge
 
