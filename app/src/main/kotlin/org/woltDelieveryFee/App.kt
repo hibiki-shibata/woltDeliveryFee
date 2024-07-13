@@ -6,7 +6,7 @@
  */
 package appkt
 
-import serverkt.Server
+import appkt.serverkt.Server
 
 fun main() {
     val server = Server()

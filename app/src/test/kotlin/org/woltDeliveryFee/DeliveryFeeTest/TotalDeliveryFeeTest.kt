@@ -1,18 +1,17 @@
  //Testing for Total calculation of CalculateTotalDeliveryFee.kt
- package calculateTotalDeliveryFeeKt
+ package appkt.calculateTotalDeliveryFeeKt
 
  import kotlin.test.Test
  import kotlin.test.assertEquals
  import kotlin.test.assertFailsWith
- import serverkt.FeeCalcRequest
+ import appkt.serverkt.FeeCalcRequest
  import kotlinx.serialization.SerializationException
  
- 
- 
+
  
  class FinalCalculation {
  
-     val deliveryFee = Deliveryfee()
+     val deliveryFee = DeliveryFee()
      @Test fun `Testing if the sum of the calculations inside of CalculateDeliveryFee expectedly works`() {
          //all zero
          val reqZero = FeeCalcRequest (

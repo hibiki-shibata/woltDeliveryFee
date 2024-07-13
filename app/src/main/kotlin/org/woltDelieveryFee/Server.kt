@@ -1,5 +1,5 @@
 // https://kotlinlang.org/docs/serialization.html#serialize-and-deserialize-json
-package serverkt
+package appkt.serverkt
 
 // server
 import io.ktor.server.application.*
@@ -24,8 +24,8 @@ import io.ktor.server.plugins.BadRequestException
 // import io.ktor.server.plugins.requestvalidation.*
 
 // my modules
-import reqDataVerifyKt.ReqDataVerify
-import resDataVerifyKt.ResDataVerify
+import appkt.reqDataVerifyKt.ReqDataVerify
+import appkt.resDataVerifyKt.ResDataVerify
 
 // for receive & respond
 import io.ktor.server.request.* 
@@ -58,12 +58,9 @@ class Server {
 
             routing {
                 post("/delivery-fee") {
-                    // val parameters = call.receive<Data>()
-                    // println(parameters)
-                    // call.respondText("Hello, world!")
-                    // // call.respondText(parameters)
+
                     try {
-                        // Request Data verification
+                        // verify incoming request
                         val request: FeeCalcRequest = call.receive<FeeCalcRequest>()
                         ReqDataVerify().invalidateRequest(request)
         

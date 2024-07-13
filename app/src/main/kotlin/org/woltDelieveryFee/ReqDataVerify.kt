@@ -1,7 +1,7 @@
 // checking if numbers are postive and if time format is in ISO format
-package reqDataVerifyKt
+package appkt.reqDataVerifyKt
 
-import serverkt.FeeCalcRequest
+import appkt.serverkt.FeeCalcRequest
 import java.time.OffsetDateTime
 // import kotlinx.serialization.SerializationException
 import io.ktor.server.plugins.BadRequestException

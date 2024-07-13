@@ -1,12 +1,12 @@
-package resDataVerifyKt
+package appkt.resDataVerifyKt
 
-import serverkt.FeeCalcRequest
-import calculateTotalDeliveryFeeKt.Deliveryfee
+import appkt.serverkt.FeeCalcRequest
+import appkt.calculateTotalDeliveryFeeKt.DeliveryFee
 
 class ResDataVerify{
 
     fun calculateDeliveryFee(request: FeeCalcRequest): Int {
-        val deliveryFee = Deliveryfee()
+        val deliveryFee = DeliveryFee()
         val finalFee = deliveryFee.sumDeliveryFee(request)
         
         //response Int verification
